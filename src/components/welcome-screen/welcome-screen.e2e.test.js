@@ -9,7 +9,7 @@ Enzyme.configure({
 });
 
 
-it(`Welcome button click`, () => {
+it(`Should call onWelcomeButtonClick`, () => {
   const onWelcomeButtonClick = jest.fn();
 
   const welcomeScreen = shallow(
@@ -23,5 +23,5 @@ it(`Welcome button click`, () => {
 
   welcomeButton.props().onClick();
 
-  expect(onWelcomeButtonClick.mock.calls.length).toBe(1);
+  expect(onWelcomeButtonClick).toHaveBeenCalledTimes(1);
 });

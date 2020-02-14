@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import WelcomeScreen from './welcome-screen.jsx';
 
 
-it(`Render WelcomeScreen`, () => {
+it(`Should match snapshot of WelcomeScreen`, () => {
   const tree = renderer
     .create(<WelcomeScreen
       errorsCount={3}
