@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import App from './app.jsx';
 
 
-it(`Should render App`, () => {
+it(`Should match snapshot of App`, () => {
   const tree = renderer
     .create(<App
       errorsCount={3}
