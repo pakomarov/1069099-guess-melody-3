@@ -1,10 +1,10 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Switch, Route, BrowserRouter} from "react-router-dom";
-import WelcomeScreen from '../welcome-screen/welcome-screen.jsx';
+import ScreenWelcome from '../screen-welcome/screen-welcome.jsx';
 import {GameType} from '../../const.js';
-import QuestionArtistScreen from '../question-artist-screen/question-artist-screen.jsx';
-import QuestionGenreScreen from '../question-genre-screen/question-genre-screen.jsx';
+import ScreenQuestionArtist from '../screen-question-artist/screen-question-artist.jsx';
+import ScreenQuestionGenre from '../screen-question-genre/screen-question-genre.jsx';
 
 
 class App extends PureComponent {
@@ -46,7 +46,7 @@ class App extends PureComponent {
 
     if (step === -1 || step >= questions.length) {
       return (
-        <WelcomeScreen
+        <ScreenWelcome
           errorsCount={errorsCount}
           onWelcomeButtonClick={this._handleWelcomeButtonClick}
         />
@@ -59,14 +59,14 @@ class App extends PureComponent {
       switch (question.type) {
         case GameType.ARTIST:
           return (
-            <QuestionArtistScreen
+            <ScreenQuestionArtist
               question={question}
               onAnswer={this._handleQuestionArtistAnswer}
             />
           );
         case GameType.GENRE:
           return (
-            <QuestionGenreScreen
+            <ScreenQuestionGenre
               question={question}
               onAnswer={this._handleQuestionGenreAnswer}
             />
@@ -87,13 +87,13 @@ class App extends PureComponent {
             {this._renderGameScreen()}
           </Route>
           <Route exact path='/artist'>
-            <QuestionArtistScreen
+            <ScreenQuestionArtist
               question={questions[1]}
               onAnswer={() => {}}
             />
           </Route>
           <Route exact path='/genre'>
-            <QuestionGenreScreen
+            <ScreenQuestionGenre
               question={questions[0]}
               onAnswer={() => {}}
             />

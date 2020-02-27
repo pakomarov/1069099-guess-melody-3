@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import QuestionArtistScreen from './question-artist-screen.jsx';
+import ScreenQuestionArtist from './screen-question-artist.jsx';
 
 
 const question = {
@@ -21,9 +21,9 @@ const question = {
   }],
 };
 
-it(`Should match snapshot of QuestionArtistScreen`, () => {
+it(`Should match snapshot of ScreenQuestionArtist`, () => {
   const tree = renderer
-    .create(<QuestionArtistScreen
+    .create(<ScreenQuestionArtist
       question={question}
       onAnswer={() => {}}
     />)

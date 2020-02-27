@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should match snapshot of QuestionArtistScreen 1`] = `
+exports[`Should match snapshot of ScreenQuestionArtist 1`] = `
 <section
   className="game game--artist"
 >

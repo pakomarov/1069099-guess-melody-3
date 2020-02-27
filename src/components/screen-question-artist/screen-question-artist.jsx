@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const QuestionArtistScreen = ({question, onAnswer}) => {
+const ScreenQuestionArtist = ({question, onAnswer}) => {
   const {song, answers} = question;
 
   return (
@@ -68,7 +68,7 @@ const QuestionArtistScreen = ({question, onAnswer}) => {
 };
 
 
-QuestionArtistScreen.propTypes = {
+ScreenQuestionArtist.propTypes = {
   question: PropTypes.shape({
     type: PropTypes.string.isRequired,
     song: PropTypes.shape({
@@ -84,4 +84,4 @@ QuestionArtistScreen.propTypes = {
 };
 
 
-export default QuestionArtistScreen;
+export default ScreenQuestionArtist;

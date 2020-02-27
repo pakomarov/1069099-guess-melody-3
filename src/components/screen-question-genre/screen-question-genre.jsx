@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 
-class QuestionGenreScreen extends PureComponent {
+class ScreenQuestionGenre extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -80,7 +80,7 @@ class QuestionGenreScreen extends PureComponent {
 }
 
 
-QuestionGenreScreen.propTypes = {
+ScreenQuestionGenre.propTypes = {
   question: PropTypes.shape({
     type: PropTypes.string.isRequired,
     genre: PropTypes.string.isRequired,
@@ -93,4 +93,4 @@ QuestionGenreScreen.propTypes = {
 };
 
 
-export default QuestionGenreScreen;
+export default ScreenQuestionGenre;
