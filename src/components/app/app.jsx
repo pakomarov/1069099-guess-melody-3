@@ -43,7 +43,6 @@ class App extends PureComponent {
   _renderGameScreen() {
     const {errorsCount, questions} = this.props;
     const {step} = this.state;
-    const question = questions[step];
 
     if (step === -1 || step >= questions.length) {
       return (
@@ -53,6 +52,8 @@ class App extends PureComponent {
         />
       );
     }
+
+    const question = questions[step];
 
     if (question) {
       switch (question.type) {
