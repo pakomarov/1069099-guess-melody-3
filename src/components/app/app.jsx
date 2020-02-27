@@ -20,10 +20,14 @@ const App = ({errorsCount, questions}) => {
           />
         </Route>
         <Route exact path='/artist'>
-          <QuestionArtistScreen question={questions[1]}/>
+          <QuestionArtistScreen
+            question={questions[1]}
+          />
         </Route>
         <Route exact path='/genre'>
-          <QuestionGenreScreen />
+          <QuestionGenreScreen
+            question={questions[0]}
+          />
         </Route>
       </Switch>
     </BrowserRouter>
