@@ -12,14 +12,14 @@ Enzyme.configure({
 it(`Should call onWelcomeButtonClick`, () => {
   const onWelcomeButtonClick = jest.fn();
 
-  const welcomeScreen = shallow(
+  const screenWelcome = shallow(
       <ScreenWelcome
         errorsCount={3}
         onWelcomeButtonClick={onWelcomeButtonClick}
       />
   );
 
-  const welcomeButton = welcomeScreen.find(`button.welcome__button`);
+  const welcomeButton = screenWelcome.find(`button.welcome__button`);
 
   welcomeButton.props().onClick();
 
