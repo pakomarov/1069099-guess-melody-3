@@ -9,7 +9,7 @@ import QuestionGenreScreen from '../question-genre-screen/question-genre-screen.
 const welcomeButtonClickHandler = () => {};
 
 
-const App = ({errorsCount}) => {
+const App = ({errorsCount, questions}) => {
   return (
     <BrowserRouter>
       <Switch>
@@ -20,7 +20,7 @@ const App = ({errorsCount}) => {
           />
         </Route>
         <Route exact path='/artist'>
-          <QuestionArtistScreen />
+          <QuestionArtistScreen question={questions[1]}/>
         </Route>
         <Route exact path='/genre'>
           <QuestionGenreScreen />
