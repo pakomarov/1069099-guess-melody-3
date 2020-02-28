@@ -21,6 +21,7 @@ const question = {
   }],
 };
 
+
 it(`Should match snapshot of ScreenQuestionArtist`, () => {
   const tree = renderer
     .create(<ScreenQuestionArtist

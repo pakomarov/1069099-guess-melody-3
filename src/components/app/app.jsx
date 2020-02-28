@@ -107,7 +107,9 @@ class App extends PureComponent {
 
 App.propTypes = {
   errorsCount: PropTypes.number.isRequired,
-  questions: PropTypes.array.isRequired,
+  questions: PropTypes.arrayOf(PropTypes.shape({
+    type: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 

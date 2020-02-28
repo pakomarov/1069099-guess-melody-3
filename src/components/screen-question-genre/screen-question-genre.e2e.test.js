@@ -8,6 +8,7 @@ configure({
   adapter: new Adapter()
 });
 
+
 const question = {
   type: ``,
   genre: ``,
@@ -46,7 +47,6 @@ it(`Should prevent default behavior of form submition`, () => {
   expect(onAnswer).toHaveBeenCalledTimes(1);
   expect(preventDefault).toHaveBeenCalledTimes(1);
 });
-
 
 it(`Should pass selected answers to onAnswer on form submition`, () => {
   const userAnswersMocks = [

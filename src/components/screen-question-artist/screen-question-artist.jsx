@@ -70,7 +70,6 @@ const ScreenQuestionArtist = ({question, onAnswer}) => {
 
 ScreenQuestionArtist.propTypes = {
   question: PropTypes.shape({
-    type: PropTypes.string.isRequired,
     song: PropTypes.shape({
       artist: PropTypes.string.isRequired,
       src: PropTypes.string.isRequired

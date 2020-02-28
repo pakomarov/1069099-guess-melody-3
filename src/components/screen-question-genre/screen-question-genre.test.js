@@ -21,6 +21,7 @@ const question = {
   }],
 };
 
+
 it(`Should match snapshot of ScreenQuestionGenre`, () => {
   const tree = renderer
     .create(<ScreenQuestionGenre
