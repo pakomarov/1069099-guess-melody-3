@@ -33,43 +33,43 @@ const question = {
 
 
 describe(`Input behavior`, () => {
-  it(`Should call onAnswer on input clicks`, () => {
-    const onAnswer = jest.fn();
-
+  it(`Should call onAnswer on all input clicks`, () => {
     const answerCount = question.answers.length;
 
-    const screenQuestionArtist = shallow(<ScreenQuestionArtist
-      question={question}
-      onAnswer={onAnswer}
-    />);
-
-    const inputElements = screenQuestionArtist.find(`input`);
-
     for (let i = 0; i < answerCount; i++) {
+      const onAnswer = jest.fn();
+
+      const screenQuestionArtist = shallow(<ScreenQuestionArtist
+        question={question}
+        onAnswer={onAnswer}
+      />);
+
+      const inputElements = screenQuestionArtist.find(`input`);
+
       const inputElement = inputElements.at(i);
       inputElement.simulate(`change`, mockEvent);
-      expect(onAnswer).toHaveBeenCalledTimes(i + 1);
+      expect(onAnswer).toHaveBeenCalled();
     }
   });
 
-  it(`Should pass question and chosen answer to onAnswer on input clicks`, () => {
-    const onAnswer = jest.fn();
-
+  it(`Should pass question and user answer to onAnswer on all input clicks`, () => {
     const answerCount = question.answers.length;
 
-    const screenQuestionArtist = shallow(<ScreenQuestionArtist
-      question={question}
-      onAnswer={onAnswer}
-    />);
-
-    const inputElements = screenQuestionArtist.find(`input`);
-
     for (let i = 0; i < answerCount; i++) {
+      const userAnswer = question.answers[i];
+
+      const onAnswer = jest.fn();
+
+      const screenQuestionArtist = shallow(<ScreenQuestionArtist
+        question={question}
+        onAnswer={onAnswer}
+      />);
+
+      const inputElements = screenQuestionArtist.find(`input`);
       const inputElement = inputElements.at(i);
       inputElement.simulate(`change`, mockEvent);
-      const userAnswer = question.answers[i];
-      expect(onAnswer.mock.calls[i][0]).toMatchObject(question);
-      expect(onAnswer.mock.calls[i][1]).toMatchObject(userAnswer);
+
+      expect(onAnswer).toHaveBeenCalledWith(question, userAnswer);
     }
   });
 });
