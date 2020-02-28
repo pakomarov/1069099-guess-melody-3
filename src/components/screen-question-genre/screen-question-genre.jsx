@@ -42,7 +42,7 @@ class ScreenQuestionGenre extends PureComponent {
             className="game__tracks"
             onSubmit={(evt) => {
               evt.preventDefault();
-              onAnswer(question, this.state.answers);
+              onAnswer(question, this.state.userAnswers);
             }}
           >
             {answers.map((answer, i) => (
