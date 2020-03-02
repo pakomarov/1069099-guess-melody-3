@@ -1,11 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import WelcomeScreen from './welcome-screen.jsx';
+import ScreenWelcome from './screen-welcome.jsx';
 
 
-it(`Should match snapshot of WelcomeScreen`, () => {
+it(`Should match snapshot of ScreenWelcome`, () => {
   const tree = renderer
-    .create(<WelcomeScreen
+    .create(<ScreenWelcome
       errorsCount={3}
       onWelcomeButtonClick={() => {}}
     />)
