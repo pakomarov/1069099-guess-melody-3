@@ -3,19 +3,19 @@ const AVATAR_URL = `https://api.adorable.io/avatars/128`;
 export default [
   {
     type: `genre`,
-    genre: `aids-rock`,
+    genre: `rock`,
     answers: [{
-      src: `https://upload.wikimedia.org/wikipedia/commons/transcoded/9/92/En-AIDS.ogg/En-AIDS.ogg.mp3`,
-      genre: `aids-rock`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      genre: `rock`,
     }, {
-      src: `https://upload.wikimedia.org/wikipedia/commons/1/13/Alzheimer%27s_Disease.ogg`,
-      genre: `alzheimer-blues`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      genre: `blues`,
     }, {
-      src: `https://upload.wikimedia.org/wikipedia/commons/f/fd/Asperger_syndrome.ogg`,
-      genre: `asperger-jazz`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      genre: `jazz`,
     }, {
-      src: `https://upload.wikimedia.org/wikipedia/commons/3/3a/Hep_C_en.ogg`,
-      genre: `hepatitis-punk`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      genre: `punk`,
     }],
   }, {
     type: `artist`,
