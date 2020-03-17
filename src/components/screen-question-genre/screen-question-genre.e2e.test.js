@@ -34,6 +34,7 @@ it(`Should prevent default behavior of form submition`, () => {
   const screenQuestionGenre = shallow(<ScreenQuestionGenre
     question={question}
     onAnswer={onAnswer}
+    renderAudioPlayer={() => {}}
   />);
 
   const formElement = screenQuestionGenre.find(`form`);
@@ -61,6 +62,7 @@ it(`Should pass selected answers to onAnswer on form submition`, () => {
     const screenQuestionGenre = shallow(<ScreenQuestionGenre
       onAnswer={onAnswer}
       question={question}
+      renderAudioPlayer={() => {}}
     />);
 
     userAnswerMock.forEach((isChecked, i) => {
