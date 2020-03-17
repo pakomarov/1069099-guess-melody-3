@@ -6,6 +6,11 @@ import {GameType} from '../../const.js';
 import ScreenGame from '../screen-game/screen-game.jsx';
 import ScreenQuestionArtist from '../screen-question-artist/screen-question-artist.jsx';
 import ScreenQuestionGenre from '../screen-question-genre/screen-question-genre.jsx';
+import withAudioPlayer from '../../hocs/with-audio-layer/with-audio-player.jsx';
+
+
+const ScreenQuestionArtistWrapped = withAudioPlayer(ScreenQuestionArtist);
+const ScreenQuestionGenreWrapped = withAudioPlayer(ScreenQuestionGenre);
 
 
 class App extends PureComponent {
@@ -63,7 +68,7 @@ class App extends PureComponent {
             <ScreenGame
               gameType={question.type}
             >
-              <ScreenQuestionArtist
+              <ScreenQuestionArtistWrapped
                 question={question}
                 onAnswer={this._handleQuestionArtistAnswer}
               />
@@ -74,7 +79,7 @@ class App extends PureComponent {
             <ScreenGame
               gameType={question.type}
             >
-              <ScreenQuestionGenre
+              <ScreenQuestionGenreWrapped
                 question={question}
                 onAnswer={this._handleQuestionGenreAnswer}
               />
@@ -99,7 +104,7 @@ class App extends PureComponent {
             <ScreenGame
               gameType={questions[1].type}
             >
-              <ScreenQuestionArtist
+              <ScreenQuestionArtistWrapped
                 question={questions[1]}
                 onAnswer={() => {}}
               />
@@ -109,7 +114,7 @@ class App extends PureComponent {
             <ScreenGame
               gameType={questions[0].type}
             >
-              <ScreenQuestionGenre
+              <ScreenQuestionGenreWrapped
                 question={questions[0]}
                 onAnswer={() => {}}
               />
