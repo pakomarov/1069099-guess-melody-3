@@ -19,13 +19,16 @@ exports[`Should match snapshot of ScreenQuestionGenre 1`] = `
       className="track"
     >
       <button
-        className="track__button track__button--play"
+        className="track__button track__button--pause"
+        disabled={true}
+        onClick={[Function]}
         type="button"
       />
       <div
         className="track__status"
       >
         <audio
+          onCanPlayThrough={[Function]}
           src="https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg"
         />
       </div>
@@ -54,12 +57,15 @@ exports[`Should match snapshot of ScreenQuestionGenre 1`] = `
     >
       <button
         className="track__button track__button--play"
+        disabled={true}
+        onClick={[Function]}
         type="button"
       />
       <div
         className="track__status"
       >
         <audio
+          onCanPlayThrough={[Function]}
           src="https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg"
         />
       </div>
@@ -88,12 +94,15 @@ exports[`Should match snapshot of ScreenQuestionGenre 1`] = `
     >
       <button
         className="track__button track__button--play"
+        disabled={true}
+        onClick={[Function]}
         type="button"
       />
       <div
         className="track__status"
       >
         <audio
+          onCanPlayThrough={[Function]}
           src="https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg"
         />
       </div>
@@ -122,12 +131,15 @@ exports[`Should match snapshot of ScreenQuestionGenre 1`] = `
     >
       <button
         className="track__button track__button--play"
+        disabled={true}
+        onClick={[Function]}
         type="button"
       />
       <div
         className="track__status"
       >
         <audio
+          onCanPlayThrough={[Function]}
           src="https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg"
         />
       </div>
