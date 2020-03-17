@@ -8,10 +8,12 @@ class ScreenQuestionGenre extends PureComponent {
     super(props);
 
     this.state = {
-      userAnswers: this.props.question.answers.slice().fill(false)
+      activePlayerId: 0,
+      userAnswers: this.props.question.answers.slice().fill(false),
     };
 
     this._handleFormSubmit = this._handleFormSubmit.bind(this);
+    this._handleToggle = this._handleToggle.bind(this);
   }
 
   _handleFormSubmit(evt) {
@@ -19,8 +21,17 @@ class ScreenQuestionGenre extends PureComponent {
     this.props.onAnswer(this.props.question, this.state.userAnswers);
   }
 
+  _handleToggle(playerId) {
+    this.setState((state) => {
+      return {
+        activePlayerId: state.activePlayerId === playerId ? -1 : playerId,
+      };
+    });
+  }
+
   render() {
     const {question: {genre, answers}} = this.props;
+    const {activePlayerId} = this.state;
 
     return (
       <section className="game__screen">
@@ -32,8 +43,10 @@ class ScreenQuestionGenre extends PureComponent {
           {answers.map((answer, i) => (
             <div key={`${i}-${answer.src}`} className="track">
               <AudioPlayer
-                isPlaying={i === 0}
+                playerId={i}
                 src={answer.src}
+                isPlaying={i === activePlayerId}
+                onToggle={this._handleToggle}
               />
               <div className="game__answer">
                 <input className="game__input visually-hidden" type="checkbox" name="answer"
