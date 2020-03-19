@@ -42,6 +42,7 @@ describe(`Input behavior`, () => {
       const screenQuestionArtist = shallow(<ScreenQuestionArtist
         question={question}
         onAnswer={onAnswer}
+        renderAudioPlayer={() => {}}
       />);
 
       const inputElements = screenQuestionArtist.find(`input`);
@@ -63,6 +64,7 @@ describe(`Input behavior`, () => {
       const screenQuestionArtist = shallow(<ScreenQuestionArtist
         question={question}
         onAnswer={onAnswer}
+        renderAudioPlayer={() => {}}
       />);
 
       const inputElements = screenQuestionArtist.find(`input`);

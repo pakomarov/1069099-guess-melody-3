@@ -15,23 +15,23 @@ export default [
       genre: `jazz`,
     }, {
       src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
-      genre: `rock`,
+      genre: `punk`,
     }],
   }, {
     type: `artist`,
     song: {
-      artist: `Jim Beam`,
-      src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
+      artist: `Jim Aids`,
+      src: `https://upload.wikimedia.org/wikipedia/commons/transcoded/9/92/En-AIDS.ogg/En-AIDS.ogg.mp3`,
     },
     answers: [{
       picture: `${AVATAR_URL}/${Math.random()}`,
-      artist: `John Snow`,
+      artist: `John Aids`,
     }, {
       picture: `${AVATAR_URL}/${Math.random()}`,
-      artist: `Jack Daniels`,
+      artist: `Jack Aids`,
     }, {
       picture: `${AVATAR_URL}/${Math.random()}`,
-      artist: `Jim Beam`,
+      artist: `Jim Aids`,
     }],
   }
 ];

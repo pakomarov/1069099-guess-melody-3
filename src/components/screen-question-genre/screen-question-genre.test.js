@@ -27,6 +27,7 @@ it(`Should match snapshot of ScreenQuestionGenre`, () => {
     .create(<ScreenQuestionGenre
       question={question}
       onAnswer={() => {}}
+      renderAudioPlayer={() => {}}
     />)
     .toJSON();
 

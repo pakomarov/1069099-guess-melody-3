@@ -27,6 +27,7 @@ it(`Should match snapshot of ScreenQuestionArtist`, () => {
     .create(<ScreenQuestionArtist
       question={question}
       onAnswer={() => {}}
+      renderAudioPlayer={() => {}}
     />)
     .toJSON();
 
